@@ -7,3 +7,8 @@ files = Dir[files_path]
 collection = ClothesCollection.make_collection(files)
 
 puts "Сколько градусов за окном? (можно с минусом)"
+user_input = gets.to_i
+
+puts collection[0]
+puts collection[0].suitable?(-10)
+
