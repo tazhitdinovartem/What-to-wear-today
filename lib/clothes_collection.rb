@@ -9,4 +9,10 @@ class ClothesCollection
       ClothItem.new(cloth_files[0], cloth_files[1], cloth_files[2])
     end
   end
+
+  def get_types_of_cloths
+    @collection
+      .map { |item| item.type }
+      .uniq
+  end
 end

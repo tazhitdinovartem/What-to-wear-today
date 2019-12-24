@@ -7,8 +7,10 @@ files = Dir[files_path]
 all_types_collection = ClothesCollection.make_collection(files)
 collection = ClothesCollection.new(all_types_collection)
 
-puts "Сколько градусов за окном? (можно с минусом)"
-user_input = gets.to_i
+p collection.get_types_of_cloths
 
-puts collection.select { |item| item.suitable?(user_input)}
+#puts "Сколько градусов за окном? (можно с минусом)"
+#user_input = gets.to_i
+
+#puts collection.select { |item| item.suitable?(user_input)}
 
