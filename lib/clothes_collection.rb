@@ -15,4 +15,12 @@ class ClothesCollection
       .map { |item| item.type }
       .uniq
   end
+
+  def get_same_type_cloths
+
+  end
+
+  def generate(temp)
+    @collection.select { |item| item.suitable?(temp)}
+  end
 end
