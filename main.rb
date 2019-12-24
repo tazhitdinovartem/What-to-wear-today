@@ -6,4 +6,4 @@ files = Dir[files_path]
 
 collection = ClothesCollection.make_collection(files)
 
-p collection
+puts "Сколько градусов за окном? (можно с минусом)"

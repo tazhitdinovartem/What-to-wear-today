@@ -8,7 +8,7 @@ class ClothItem
 
   def get_range(temp_range)
     ranges = temp_range.scan(/-?\d+/)
-    Range.new(ranges[0], ranges[1])
+    Range.new(ranges[0].to_i, ranges[1].to_i).to_a
   end
 
   def suitable?(temp)
