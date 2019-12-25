@@ -9,14 +9,7 @@ class ClothesCollection
       ClothItem.new(cloth_files[0], cloth_files[1], cloth_files[2])
     end
   end
-  #тут будет метод, который забирает из suitable_collection несколько вещей одного типа
-  #возвращает рандомную вещь этого же типа в коллекцию
-  def get_types_of_cloths
-    @collection
-      .map { |item| item.type }
-      .uniq
-  end
-
+  
   def get_same_type_cloths
     @suitable_collection.group_by{|item| item.type}
   end

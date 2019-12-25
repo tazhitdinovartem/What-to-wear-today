@@ -10,8 +10,8 @@ collection = ClothesCollection.new(all_types_collection)
 puts "Сколько градусов за окном? (можно с минусом)"
 user_input = gets.to_i
 
+puts "Предлагаем сегодня надеть:"
 collection.generate(user_input)
-#проверить, работает ли
 collection.get_same_type_cloths.each do |key, value|
-  p value.sample
+  puts value.sample
 end
