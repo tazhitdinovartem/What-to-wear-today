@@ -10,12 +10,10 @@ class ClothesCollection
     end
   end
   
-  def get_same_type_cloths
-    @suitable_collection.group_by{|item| item.type}
-  end
-
-  def generate(temp)
-    @suitable_collection = 
-      @collection.select { |item| item.suitable?(temp)}
+  def get_uniq_collection(temp)
+    @collection
+    .select { |item| item.suitable?(temp) }
+    .group_by { |item| item.type }
+    .map { |key, value|  value.sample }
   end
 end

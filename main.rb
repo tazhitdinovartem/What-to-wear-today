@@ -12,7 +12,10 @@ user_input = gets.to_i
 puts
 puts "Предлагаем сегодня надеть:"
 puts
-collection.generate(user_input)
-collection.get_same_type_cloths.each do |key, value|
-  puts value.sample
+collection = collection.get_uniq_collection(user_input)
+
+if collection.empty?
+  puts "К сожалению, у вас нет подходящей одежды"
+else 
+  puts collection
 end
